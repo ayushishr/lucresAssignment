@@ -4,6 +4,46 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Search, Home, Mail, Bell, User, Plus, Eye, Download, Clock, MapPin, Star, Calendar, ExternalLink, Share2, Heart, Bookmark, MessageCircle, CheckCircle, Award, GraduationCap, Briefcase, ChevronDown, Edit, Lock } from 'lucide-react';
 import logo1 from '../image/logo1.svg';
 import boy1 from '../image/boy1.png';
+import girl1 from '../image/girl1.png';
+
+const candidates = [
+  {
+    id: 1,
+    name: 'Pritesh Srivastava',
+    location: 'Bengaluru, India',
+    experience: '8 Years of Exp.',
+    avatar: boy1,
+    recentRole: 'Lead Designer - Lollypop Designs',
+    recentDuration: 'Jan 2022 - Present • 2 years 8 months',
+    education: 'MA, Graphic Design · Kingston University London · 2022',
+    tags: [
+      { label: 'Visual Design', color: 'green', icon: true },
+      { label: 'Prototyping', color: 'gray' },
+      { label: 'Problem Solving', color: 'gray' },
+      { label: '+3', color: 'gray' },
+    ],
+    applied: 'Applied 2 Days Ago',
+    button: 'view',
+  },
+  {
+    id: 2,
+    name: 'Pritesh Srivastava',
+    location: 'Bengaluru, India',
+    experience: '8 Years of Exp.',
+    avatar: boy1,
+    recentRole: 'Lead Designer - Lollypop Designs',
+    recentDuration: 'Jan 2022 - Present • 2 years 8 months',
+    education: 'MA, Graphic Design · Kingston University London · 2022',
+    tags: [
+      { label: 'Visual Design', color: 'green', icon: true },
+      { label: 'Prototyping', color: 'gray' },
+      { label: 'Problem Solving', color: 'gray' },
+      { label: '+3', color: 'gray' },
+    ],
+    applied: 'Applied 2 Days Ago',
+    button: 'reveal',
+  },
+];
 
 const CandidateDetails = () => {
   const { jobId } = useParams();
@@ -35,7 +75,7 @@ const CandidateDetails = () => {
             <Mail className="w-5 h-5 text-gray-400" />
             <Bell className="w-5 h-5 text-gray-400" />
             <User className="w-5 h-5 text-gray-400" />
-            <button className="w-[120px] md:w-[170px] h-[40px] md:h-[52px] rounded-full px-4 md:px-[23px] py-2 md:py-[16px] bg-green-500 text-white text-xs md:text-base font-medium hover:bg-green-600 transition-colors flex items-center justify-center space-x-2">
+            <button className="w-[120px] md:w-[170px] h-[40px] md:h-[52px] rounded-full px-4 md:px-[23px] py-2 md:py-[16px]  text-[#2D4232] text-xs md:text-base font-medium hover:bg-green-500 bg-[#B6E777] transition-colors flex items-center justify-center space-x-2">
               <Plus className="w-4 h-4" />
               <span>Create a Job</span>
             </button>
@@ -58,7 +98,7 @@ const CandidateDetails = () => {
           </div>
 
           {/* Job Info Card */}
-          <div className="px-4 md:px-6 py-3 md:py-4 border-b border-gray-200 bg-[#F8F9FA]">
+          <div className="px-4 md:px-6 py-3 md:py-4 bg-white rounded-lg shadow-sm mt-4 mb-2">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-2 gap-2">
               <div>
                 <h2 className="text-base md:text-[16px] font-semibold text-gray-900">Senior Product Designer</h2>
@@ -77,21 +117,21 @@ const CandidateDetails = () => {
               </div>
             </div>
             <div className="flex items-center gap-3 mt-2">
-              <div className="flex items-center gap-1 text-xs text-gray-700 bg-gray-100 px-2 py-1 rounded">
+              <div className="flex items-center gap-1 text-xs text-gray-700 bg-white px-2 py-1 rounded shadow border border-gray-200">
                 <Star className="w-4 h-4 text-yellow-500" /> 4/5 Reveals Left
               </div>
             </div>
           </div>
 
           {/* Filter Tabs */}
-          <div className="px-4 md:px-6 py-2 md:py-3 border-b border-gray-200 overflow-x-auto">
-            <div className="flex space-x-2 min-w-max">
-              <button className="text-xs md:text-[15px] font-medium text-green-600 border-b-2 border-green-600 pb-2 bg-[#EEEEEE]">All</button>
-              <button className="text-xs md:text-[15px] font-medium text-gray-500 hover:text-gray-700 pb-2">Unlocked</button>
-              <button className="text-xs md:text-[15px] font-medium text-gray-500 hover:text-gray-700 pb-2">Interviewing</button>
-              <button className="text-xs md:text-[15px] font-medium text-gray-500 hover:text-gray-700 pb-2">Accepted</button>
-              <button className="text-xs md:text-[15px] font-medium text-gray-500 hover:text-gray-700 pb-2">Rejected</button>
-              <button className="text-xs md:text-[15px] font-medium text-gray-500 hover:text-gray-700 pb-2">Saved</button>
+          <div className="px-4 md:px-6 py-2 md:py-3 border-b border-gray-200 w-full">
+            <div className="flex flex-nowrap gap-1 w-full">
+               <button className="px-2 py-1 rounded-full bg-[#E8F5D9] text-green-700 font-medium text-[11px] border border-transparent flex-shrink">All</button>
+               <button className="px-2 py-1 rounded-full bg-[#F5F5F5] text-gray-600 font-medium text-[11px] border border-transparent hover:bg-gray-200 flex-shrink">Unlocked</button>
+               <button className="px-2 py-1 rounded-full bg-[#F5F5F5] text-gray-600 font-medium text-[11px] border border-transparent hover:bg-gray-200 flex-shrink">Interviewing</button>
+               <button className="px-2 py-1 rounded-full bg-[#F5F5F5] text-gray-600 font-medium text-[11px] border border-transparent hover:bg-gray-200 flex-shrink">Accepted</button>
+               <button className="px-2 py-1 rounded-full bg-[#F5F5F5] text-gray-600 font-medium text-[11px] border border-transparent hover:bg-gray-200 flex-shrink">Rejected</button>
+               <button className="px-2 py-1 rounded-full bg-[#F5F5F5] text-gray-600 font-medium text-[11px] border border-transparent hover:bg-gray-200 flex-shrink">Saved</button>
             </div>
           </div>
 
@@ -117,48 +157,59 @@ const CandidateDetails = () => {
           {/* Candidate List */}
           <div className="flex-1 px-2 md:px-6 py-2 md:py-4 min-h-0 overflow-y-auto">
             <div className="space-y-3 md:space-y-4">
-              {/* Candidate Card Example */}
-              <div className="bg-white rounded-lg border border-gray-200 p-3 md:p-4 flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Lock className="w-4 h-4 text-gray-400" />
-                    <span className="text-xs text-gray-500 font-medium">Profile Locked</span>
+              {candidates.map((candidate, idx) => (
+                <div key={candidate.id} className="bg-[#F8F9FA]  rounded-lg border border-[#E8E8E8] p-4 flex flex-col gap-2 shadow-sm">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Lock className="w-4 h-4 text-gray-400" />
+                      <span className="text-xs text-gray-500 font-medium">Profile Locked</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button className="text-gray-400 hover:text-yellow-500"><Star className="w-4 h-4" /></button>
+                      <button className="text-gray-400 hover:text-gray-600"><Share2 className="w-4 h-4" /></button>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <button className="text-gray-400 hover:text-yellow-500"><Star className="w-4 h-4" /></button>
-                    <button className="text-gray-400 hover:text-gray-600"><Share2 className="w-4 h-4" /></button>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                      <img src={candidate.avatar} alt="Candidate" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900 text-sm">{candidate.name}</p>
+                      <p className="text-xs text-gray-500">{candidate.location} • {candidate.experience}</p>
+                    </div>
+                  </div>
+                  <div className="mt-2">
+                    <div className="text-xs text-gray-500 mb-1">Recent Experience</div>
+                    <div className="font-medium text-gray-800 text-xs">{candidate.recentRole}</div>
+                    <div className="text-xs text-gray-400">{candidate.recentDuration}</div>
+                  </div>
+                  <div className="mt-2">
+                    <div className="text-xs text-gray-500 mb-1">Educations</div>
+                    <div className="font-semibold text-gray-900 text-xs">{candidate.education}</div>
+                    <div className="flex flex-wrap gap-1 mt-1">
+                      {candidate.tags.map((tag, i) => (
+                        <span
+                          key={i}
+                          className={`px-2 py-1 rounded text-[11px] font-medium flex items-center gap-1 ${tag.color === 'green' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}
+                        >
+                          {tag.icon && <CheckCircle className="w-3 h-3" />} {tag.label}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-3 gap-2">
+                    <span className="text-xs text-gray-400">{candidate.applied}</span>
+                    <div className="flex gap-2 w-full md:w-auto">
+                      {candidate.button === 'view' && (
+                        <button className="flex-1 md:flex-none text-xs bg-gray-100 border border-gray-300 rounded px-3 py-1 font-medium hover:bg-gray-200">View Application</button>
+                      )}
+                      {candidate.button === 'reveal' && (
+                        <button className="flex-1 md:flex-none text-xs bg-white border border-gray-300 rounded px-3 py-1 font-medium hover:bg-gray-100">Reveal Profile</button>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 md:gap-3 mt-2">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
-                    <img src={boy1} alt="Candidate" className="w-full h-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900 text-xs md:text-sm">Pritesh Srivastava</p>
-                    <p className="text-xs text-gray-500">Bengaluru, India • 8 Years of Exp</p>
-                  </div>
-                </div>
-                <div className="mt-2">
-                  <div className="text-xs text-gray-500 mb-1">Recent Experience</div>
-                  <div className="font-medium text-gray-800 text-xs">Lead Designer - Lollypop Designs</div>
-                  <div className="text-xs text-gray-400">Jan 2022 - Present • 2 years 8 months</div>
-                </div>
-                <div className="mt-2">
-                  <div className="text-xs text-gray-500 mb-1">Education</div>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="bg-green-100 text-green-700 px-2 py-1 rounded text-[10px] font-medium">Visual Design</span>
-                    <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-[10px] font-medium">Prototyping</span>
-                    <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-[10px] font-medium">Problem Solving</span>
-                    <span className="bg-gray-200 text-gray-700 px-2 py-1 rounded text-[10px] font-medium">+3</span>
-                  </div>
-                  <div className="text-xs text-gray-700 mt-1">MA, Graphic Design • Kingston University London • 2022</div>
-                </div>
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-xs text-gray-400">Applied 2 Days Ago</span>
-                  <button className="text-xs bg-gray-100 border border-gray-300 rounded px-3 py-1 font-medium hover:bg-gray-200 w-full sm:w-auto">Reveal Profile</button>
-                </div>
-              </div>
-              {/* Repeat for more candidates as needed */}
+              ))}
             </div>
           </div>
         </div>

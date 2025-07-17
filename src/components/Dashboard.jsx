@@ -79,7 +79,7 @@ const Dashboard = () => {
             <Mail className="w-5 h-5 text-gray-400" />
             <Bell className="w-5 h-5 text-gray-400" />
             <User className="w-5 h-5 text-gray-400" />
-            <button className="w-[120px] md:w-[170px] h-[40px] md:h-[52px] rounded-full px-4 md:px-[23px] py-2 md:py-[16px] bg-[#B6E777] text-white text-xs md:text-base font-medium hover:bg-green-600 transition-colors flex items-center justify-center space-x-2">
+            <button className="w-[120px] md:w-[170px] h-[40px] md:h-[52px] rounded-full px-4 md:px-[23px] py-2 md:py-[16px] bg-[#B6E777] text-[#2D4232] text-xs md:text-base font-medium hover:bg-green-600 transition-colors flex items-center justify-center space-x-2">
               <Plus className="w-4 h-4" />
               <span>Create a Job</span>
             </button>
